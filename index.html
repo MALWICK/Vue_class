@@ -8,10 +8,11 @@
 </head>
 <body>
    <div id="app">
-    <img v-bind:src="picture" alt="mother" >
+    <img :class="gender" v-bind:src="picture" alt="mother" >
     <h1> {{firstname}} {{lastName}}</h1>
+    <h3>Age:{{age}}</h3>
     <h3>Email: {{email}}</h3>
-    <button type="button">Get Random Users</button>
+    <button v-on:click="getUser()" type="button" :class="gender">Get Random Users</button>
 
    </div>
    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
